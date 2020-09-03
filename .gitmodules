@@ -1,0 +1,3 @@
+[submodule "MediaDevicesExt"]
+	path = MediaDevicesExt
+	url = https://github.com/Code-Artist/MediaDevicesExt

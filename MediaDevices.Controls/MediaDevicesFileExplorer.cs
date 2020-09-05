@@ -95,7 +95,7 @@ namespace MediaDevices.Controls
         private void Watcher_DeviceConnected(object sender, EventArgs e)
         {
             IsConnected = true;
-            ConnectionStatusChanged?.Invoke(this, null);
+            Reconnect();
         }
 
         public void Reconnect()
@@ -118,7 +118,6 @@ namespace MediaDevices.Controls
                 IsConnected = true;
                 Root = Device.GetRootDirectory().Name;
             }
-
             ConnectionStatusChanged?.Invoke(this, null);
         }
 

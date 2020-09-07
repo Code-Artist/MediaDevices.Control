@@ -18,6 +18,7 @@ namespace MediaDevices.Controls_Demo
         {
             using (MediaDeviceFolderBrowseDialog dialog = new MediaDeviceFolderBrowseDialog("Redmi 4X"))
             {
+                dialog.InitialDirectory = TxtFolder.Text;
                 if(dialog.ShowDialog() == DialogResult.OK)
                 {
                     TxtFolder.Text = dialog.SelectedFolder;

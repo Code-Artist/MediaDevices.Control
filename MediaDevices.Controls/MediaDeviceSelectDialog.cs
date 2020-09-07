@@ -14,6 +14,10 @@ namespace MediaDevices.Controls
         /// Get or set selected device description.
         /// </summary>
         public string SelectedDevice { get; set; }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MediaDeviceSelectDialog()
         {
             //this.SetAppIcon();

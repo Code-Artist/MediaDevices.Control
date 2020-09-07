@@ -5,9 +5,12 @@ using System.Windows.Forms;
 
 namespace MediaDevices.Controls
 {
+    /// <summary>
+    /// Media Device File Browser Control
+    /// </summary>
     public partial class MediaDeviceFileBrowser : UserControl
     {
-        private MediaDevicesFileExplorer FileExplorer;
+        private readonly MediaDevicesFileExplorer FileExplorer;
 
         /// <summary>
         /// Displays folders only
@@ -20,18 +23,21 @@ namespace MediaDevices.Controls
             set => DeviceFileExplorer.ShowFoldersOnly = value;
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MediaDeviceFileBrowser()
         {
             InitializeComponent();
             BtReconnect.Enabled = false;
             FileExplorer = new MediaDevicesFileExplorer();
-            FileExplorer.ConnectionStatusChanged += FileExplorer_ConnectionStatusChanged;
+            FileExplorer.DeviceConnected += FileExplorer_ConnectionStatusChanged;
             DeviceFileExplorer.AttachSource(FileExplorer);
         }
 
         private void FileExplorer_ConnectionStatusChanged(object sender, EventArgs e)
         {
-            if(InvokeRequired)
+            if (InvokeRequired)
             {
                 BeginInvoke(new MethodInvoker(UpdateConnectionStatus));
                 return;

@@ -31,19 +31,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MediaDevices.Controls.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CodeArtEng.Controls, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeArtEng.Controls.2.7.0\lib\net40\CodeArtEng.Controls.dll</HintPath>
+    <Reference Include="CodeArtEng.Controls, Version=2.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeArtEng.Controls.2.7.1\lib\net40\CodeArtEng.Controls.dll</HintPath>
     </Reference>
     <Reference Include="CodeArtEng.Extensions, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeArtEng.Extensions.1.5.1\lib\net40\CodeArtEng.Extensions.dll</HintPath>
+      <HintPath>..\packages\CodeArtEng.Controls.2.7.1\lib\net40\CodeArtEng.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Cyotek.Windows.Forms.ColorPicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeArtEng.Controls.2.7.1\lib\net40\Cyotek.Windows.Forms.ColorPicker.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeArtEng.Controls.2.7.0\lib\net40\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <HintPath>..\packages\CodeArtEng.Controls.2.7.1\lib\net40\Microsoft.WindowsAPICodePack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeArtEng.Controls.2.7.0\lib\net40\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <HintPath>..\packages\CodeArtEng.Controls.2.7.1\lib\net40\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

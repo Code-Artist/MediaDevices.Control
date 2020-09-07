@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FileExplorer = new CodeArtEng.Controls.FileExplorer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtOK = new System.Windows.Forms.Button();
-            this.BtCancel = new System.Windows.Forms.Button();
             this.LbErrorMessage = new System.Windows.Forms.Label();
+            this.BtCancel = new System.Windows.Forms.Button();
+            this.BtOK = new System.Windows.Forms.Button();
+            this.EventTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,28 @@
             this.panel1.Size = new System.Drawing.Size(705, 46);
             this.panel1.TabIndex = 1;
             // 
+            // LbErrorMessage
+            // 
+            this.LbErrorMessage.AutoSize = true;
+            this.LbErrorMessage.ForeColor = System.Drawing.Color.Red;
+            this.LbErrorMessage.Location = new System.Drawing.Point(12, 18);
+            this.LbErrorMessage.Name = "LbErrorMessage";
+            this.LbErrorMessage.Size = new System.Drawing.Size(87, 13);
+            this.LbErrorMessage.TabIndex = 2;
+            this.LbErrorMessage.Text = "<Error Message>";
+            this.LbErrorMessage.Visible = false;
+            // 
+            // BtCancel
+            // 
+            this.BtCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtCancel.Location = new System.Drawing.Point(618, 11);
+            this.BtCancel.Name = "BtCancel";
+            this.BtCancel.Size = new System.Drawing.Size(75, 26);
+            this.BtCancel.TabIndex = 1;
+            this.BtCancel.Text = "Cancel";
+            this.BtCancel.UseVisualStyleBackColor = true;
+            // 
             // BtOK
             // 
             this.BtOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,26 +94,10 @@
             this.BtOK.UseVisualStyleBackColor = true;
             this.BtOK.Click += new System.EventHandler(this.BtOK_Click);
             // 
-            // BtCancel
+            // EventTimer
             // 
-            this.BtCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtCancel.Location = new System.Drawing.Point(618, 11);
-            this.BtCancel.Name = "BtCancel";
-            this.BtCancel.Size = new System.Drawing.Size(75, 26);
-            this.BtCancel.TabIndex = 1;
-            this.BtCancel.Text = "Cancel";
-            this.BtCancel.UseVisualStyleBackColor = true;
-            // 
-            // LbErrorMessage
-            // 
-            this.LbErrorMessage.AutoSize = true;
-            this.LbErrorMessage.ForeColor = System.Drawing.Color.Red;
-            this.LbErrorMessage.Location = new System.Drawing.Point(12, 18);
-            this.LbErrorMessage.Name = "LbErrorMessage";
-            this.LbErrorMessage.Size = new System.Drawing.Size(87, 13);
-            this.LbErrorMessage.TabIndex = 2;
-            this.LbErrorMessage.Text = "<Error Message>";
-            this.LbErrorMessage.Visible = false;
+            this.EventTimer.Interval = 1000;
+            this.EventTimer.Tick += new System.EventHandler(this.EventTimer_Tick);
             // 
             // MediaDeviceFolderBrowseDialog
             // 
@@ -120,5 +128,6 @@
         private System.Windows.Forms.Label LbErrorMessage;
         private System.Windows.Forms.Button BtCancel;
         private System.Windows.Forms.Button BtOK;
+        private System.Windows.Forms.Timer EventTimer;
     }
 }

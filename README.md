@@ -11,7 +11,7 @@ MediaDevices.Control is a Windows Form Control for MediaDevices to interact with
 ## Features
 ### Media Device Select Dialog
 WinForms Dialog to select connected device by it's description.
-![DeviceSelectDialog](./Images/DeviceSelectDialog.png)
+![DeviceSelectDialog](./Images/DeviceSelectDialog.PNG)
 
 **Usage:**
 ```CSharp            
